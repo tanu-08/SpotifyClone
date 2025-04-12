@@ -23,16 +23,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val authViewModel: AuthActivityViewModel by viewModels()
     private val REDIRECT_URI = "com.tanu.spotifymusic://auth"
-    private val REQUEST_CODE = 1001
-
-    private val authLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == RESULT_OK) {
-            val authCode = result.data?.getStringExtra("auth_code")
-            authCode?.let {
-                authViewModel.authenticateUser(it, REDIRECT_URI)
-            }
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -76,6 +66,4 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-
 }

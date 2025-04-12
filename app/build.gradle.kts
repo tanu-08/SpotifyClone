@@ -69,4 +69,7 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
     implementation(libs.logging.interceptor)
+
+    //Splash Screen
+    implementation(libs.androidx.core.splashscreen)
 }
