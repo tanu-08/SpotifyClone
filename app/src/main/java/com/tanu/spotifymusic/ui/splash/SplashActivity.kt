@@ -13,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.tanu.spotifymusic.R
 import com.tanu.spotifymusic.ui.auth.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
