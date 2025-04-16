@@ -16,4 +16,9 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/animate_ic_splash</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.SpotifyMusic</item>
     </style>
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/plus_jakarta_sans_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+    </style>
 </resources>

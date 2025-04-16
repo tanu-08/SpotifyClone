@@ -5,16 +5,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.tanu.spotifymusic.R
 import com.tanu.spotifymusic.common.AppConstants
 import com.tanu.spotifymusic.databinding.ActivityMainBinding
-import com.tanu.spotifymusic.ui.dashboard.home.HomeActivity
+import com.tanu.spotifymusic.ui.dashboard.DashboardActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -51,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             authViewModel.authResponse.collect { response ->
                 response?.let {
                     Toast.makeText(this@MainActivity, "Access Token: ${it.access_token}", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+                    startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
                     finish()
                 }
             }
